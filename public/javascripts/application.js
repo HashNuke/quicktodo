@@ -19,10 +19,10 @@ $(document).ready(function(){
     $(".todo .todo_name input[type=text]").live('keypress', function(e) {
         if(e.which == 13)
         {
-            if( $(".tasks .task").length > 0)
-            {
-                $(".tasks .task input[type=text]").first().focus();
-            }
+            if( $(".tasks .task").length == 0)
+                    $('.add_task a').click();
+
+            $(".tasks .task input[type=text]").first().focus();
             return false;
         }
     });
