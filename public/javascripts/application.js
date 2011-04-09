@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+    // Note: for todos#new
     $(".task_name_input").live('keypress', function(e) {
         if(e.which == 13)
         {
@@ -13,7 +14,8 @@ $(document).ready(function(){
             return false;
         }
     });
-
+    
+    // Note: for todos#new
     $(".todo .todo_name input[type=text]").live('keypress', function(e) {
         if(e.which == 13)
         {
@@ -24,7 +26,8 @@ $(document).ready(function(){
             return false;
         }
     });
-
+    
+    // Note: for todos#show
     $(".edit_task .task_name").bind('click', function() {
         
         if( $(this).hasClass("striken") )
@@ -35,6 +38,7 @@ $(document).ready(function(){
         $(this).parent('.edit_task').submit();
     });
 
+    // Note: for todos#show
     $('.edit_task').bind('ajax:success', function(evt, data, status, xhr){
         $(this).parent().effect('highlight', {}, 2000);
         
@@ -47,6 +51,6 @@ $(document).ready(function(){
         
     });
 
+    // Note: for todos#show
     $(".notice").animate({ opacity: 0}, 2000);
-    
 });
