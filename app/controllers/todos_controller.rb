@@ -9,8 +9,6 @@ class TodosController < ApplicationController
     end
   end
 
-  # GET /todos/new
-  # GET /todos/new.xml
   def new
     @todo = Todo.new
 
@@ -24,14 +22,10 @@ class TodosController < ApplicationController
   def create
     @todo = Todo.new(params[:todo])
 
-    respond_to do |format|
-      if @todo.save
-        format.html { redirect_to(@todo, :notice => 'Todo was successfully created.') }
-        format.xml  { render :xml => @todo, :status => :created, :location => @todo }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @todo.errors, :status => :unprocessable_entity }
-      end
+    if @todo.save
+      redirect_to(@todo, :notice => 'Todo was successfully created.')
+    else
+      render :action => "new"
     end
   end
 
