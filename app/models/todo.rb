@@ -3,6 +3,8 @@ class Todo < ActiveRecord::Base
 
   accepts_nested_attributes_for :tasks, :reject_if => lambda { |a| a[:name].blank? }, :allow_destroy => true
 
+  validates_presence_of :name, :message => "A todo list without a name?"
+
   after_create :create_url_hash
 
   def create_url_hash

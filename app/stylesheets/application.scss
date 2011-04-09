@@ -121,3 +121,9 @@
     color: #888;
     text-decoration: line-through;
 }
+
+#error_explanation{
+    @include column(24, true);
+    color: #B30000;
+    font-size: 160%;
+}

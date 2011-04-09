@@ -53,4 +53,6 @@ $(document).ready(function(){
 
     // Note: for todos#show
     $(".notice").animate({ opacity: 0}, 2000);
+
+    $("#error_explanation").effect('highlight', {color: '#FFB3B3'}, 1000);
 });

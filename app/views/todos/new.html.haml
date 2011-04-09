@@ -1,15 +1,12 @@
+- content_for :header do 
+  = javascript_include_tag "jquery-ui"
+
 = nested_form_for(@todo, :class=>"todo_form") do |f|
   .todo
     - if @todo.errors.any?
       #error_explanation
-        %h2
-          = pluralize(@todo.errors.count, "error")
-          prohibited this todo from being saved:
-
-        %ul
-          - @todo.errors.full_messages.each do |msg|
-            %li
-              = msg
+        - @todo.errors.each do |key_name, msg|
+          = msg
 
     .todo_name
       .todo_label For
@@ -22,7 +19,7 @@
           = task_f.text_field :name, :class=>"task_name_input"
           = task_f.link_to_remove image_tag("delete.gif")
     .add_task
-      = f.link_to_add "Add another task", :tasks
+      = f.link_to_add "Add task", :tasks
 
   .actions
     = f.submit "Create todo list", :class=>"create_todo"
