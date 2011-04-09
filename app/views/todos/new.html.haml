@@ -1,23 +1,28 @@
-= nested_form_for(@todo) do |f|
-  - if @todo.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@todo.errors.count, "error")
-        prohibited this todo from being saved:
+= nested_form_for(@todo, :class=>"todo_form") do |f|
+  .todo
+    - if @todo.errors.any?
+      #error_explanation
+        %h2
+          = pluralize(@todo.errors.count, "error")
+          prohibited this todo from being saved:
 
-      %ul
-        - @todo.errors.full_messages.each do |msg|
-          %li
-            = msg
+        %ul
+          - @todo.errors.full_messages.each do |msg|
+            %li
+              = msg
 
-  .todo_name
-    = f.text_field :name
-    
-  .tasks
-    .tasks_title Tasks
-    = f.fields_for :tasks do |task_f|
-      .task
-        = task_f.text_field :name
+    .todo_name
+      .todo_label For
+      = f.text_field :name
+      
+    .tasks
+      .tasks_title Tasks
+      = f.fields_for :tasks do |task_f|
+        .task
+          = task_f.text_field :name
+          = task_f.link_to_remove image_tag("delete.gif")
+    .add_task
+      = f.link_to_add "Add another task", :tasks
 
   .actions
     = f.submit "Create todo list", :class=>"create_todo"

@@ -4,6 +4,20 @@
     @include blueprint(true);    
     @include container;
 
+    .header {
+        @include column(24, true);
+        font-size: 180%;
+        text-align: center;
+        .name_quick {color: #777;} 
+        .name_todo {color: #990080;} 
+    }
+
+    .notice {
+      @include column(23, true); 
+      text-align: center;
+      font-weight: bold;
+    }
+
     .content {
         @include column(24, true);
         .actions {
@@ -14,14 +28,15 @@
             }
         }
        
-        .notice {
-          @include column(24, true); 
-          text-align: center;
-          font-weight: bold;
-        }
 
-        form {
+        .new_todo {
             @include column(24,true);
+            margin-top: 4em;
+            .todo_label {
+                font-size: 160%;
+                font-family: serif;
+                
+            }
             .todo_name {
                 @include span(23,true);
                 input[type=text] {
@@ -29,20 +44,59 @@
                 }
             }
             .tasks {
+                margin-top: 3em;
                 .tasks_title {
-                    color: #060;
+                    font-size: 160%;
+                    font-family: serif;
                 }
                 @include span(24,true);
                 .task {
-                    @include span(23,true);
+                    @include span(24, true);
+                    vertical-align: middle;
                     input[type=text] {
-                        width: 100%;
+                        width: 90%;
+                    }
+                    a {
+                        img {
+                          vertical-align: middle;
+                        }
                     }
                 }
             }
-        }    
+            .add_task {
+                a {
+                  color: #06C;
+                  font-size: 120%;
+                } 
+            }
+        }  
     }
-
     
+    .show_todo {
+        @include column(24,true);
+        margin-top: 20px;
+        .todo_name{
+            font-size: 160%;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .task {
+            @include column(24,true);
+            margin-top: 20px;
+            font-size: 160%;
+            .task_arrow {
+                @include column(2);
+            }
+            .task_name {
+                @include column(22,true);
+                cursor: pointer;
+            }
+        }
+    }
+}
 
+.striken{
+    color: #888;
+    text-decoration: line-through;
 }

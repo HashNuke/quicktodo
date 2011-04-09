@@ -1,6 +1,5 @@
 Quicktodo::Application.routes.draw do
 
-
   resources :tasks
   resources :todos
   match "/:url_hash" => "todos#show", :as=>:hashed

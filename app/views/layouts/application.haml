@@ -9,7 +9,7 @@
     /[if lt IE 8]
       = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
 
-    = javascript_include_tag "jquery", "rails"
+    = javascript_include_tag "jquery", "rails", "nested_form", "application"
     /[if lt IE 7]
       = stylesheet_link_tag 'ie6.css', :media => 'screen, projection'  
 
@@ -19,7 +19,8 @@
     .wrapper
 
       .header
-        QuickTodo
+        %span{:class=>"name_quick"}>< quick
+        %span{:class=>"name_todo"}>< TodoList
 
       -if notice
         .notice

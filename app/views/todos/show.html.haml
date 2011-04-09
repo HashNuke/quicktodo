@@ -1,0 +1,18 @@
+-content_for :header do
+  =javascript_include_tag "jquery-ui"
+
+.show_todo
+  .todo_name= @todo.name
+  .tasks
+    - @todo.tasks.each do |task|
+      .task
+        = form_for task do |f|
+          = f.hidden_field :completed, :class=>"task_completion"
+          .task_arrow
+            = image_tag "arrow.png"
+          - if f.object.completed == true
+            - taskClasses = " striken"
+          - else
+            - taskClasses = ""
+          %div{:class=>"task_name" << taskClasses}
+            = f.object.name

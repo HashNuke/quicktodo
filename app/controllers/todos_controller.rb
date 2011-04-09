@@ -6,7 +6,7 @@ class TodosController < ApplicationController
 
   def new
     @todo = Todo.new
-    4.times do
+    5.times do
       @todo.tasks.build
     end
   end
