@@ -10,7 +10,7 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'compass'
 gem 'fancy-buttons'
-
+gem 'base32'
 
 # Use unicorn as the web server
 # gem 'unicorn'
