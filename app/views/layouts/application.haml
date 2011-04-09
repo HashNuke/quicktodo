@@ -20,8 +20,14 @@
     .wrapper
 
       .header
-        %span{:class=>"name_quick"}>< quick
-        %span{:class=>"name_todo"}>< TodoList
+        .app_name
+          %a{:href=>"/"}
+            %span{:class=>"name_quick"}>< quick
+            %span{:class=>"name_todo"}>< TodoList
+            
+        - if params[:action]=="show"
+          %br
+          = link_to "want to create another?", root_url
 
       -if notice
         .notice

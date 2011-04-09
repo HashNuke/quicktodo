@@ -6,16 +6,25 @@
 
     .header {
         @include column(24, true);
-        font-size: 180%;
         text-align: center;
-        .name_quick {color: #777;} 
-        .name_todo {color: #990080;} 
+        .app_name {
+            @include column(24, true);
+            font-size: 180%;
+            a {
+              text-decoration: none;
+              .name_quick { color: #777;} 
+              .name_todo { color: #990080;} 
+            }
+        }
+        a {
+            color: #06c;
+        }
     }
     
     .footer {
         @include column(24, true);
         text-align: center;
-        margin-top: 50px;
+        margin-top: 70px;
         a {
           color: #06C;
         }
