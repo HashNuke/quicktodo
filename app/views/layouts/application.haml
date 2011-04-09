@@ -9,11 +9,12 @@
     /[if lt IE 8]
       = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
 
-    = javascript_include_tag "jquery", "rails", "nested_form", "application"
+    = javascript_include_tag "jquery", "rails", "nested_form"
     /[if lt IE 7]
       = stylesheet_link_tag 'ie6.css', :media => 'screen, projection'  
 
     = yield :header
+    = javascript_include_tag "application"
     = csrf_meta_tag
   %body
     .wrapper
@@ -30,4 +31,10 @@
         = yield
 
       .footer
+        quickTodoList by 
+        =link_to "Akash Manohar", "http://akash.im"
+        %br
+        =link_to image_tag("github_icon.png"), "http://github.com/SingAlong/quicktodo"
+        \:
+        =link_to "http://github.com/SingAlong/quicktodo", "http://github.com/SingAlong/quicktodo"
         

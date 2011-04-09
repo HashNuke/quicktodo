@@ -1086,6 +1086,27 @@ a img {
   color: #990080;
 }
 /* line 15, ../../app/stylesheets/application.scss */
+.wrapper .footer {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 500px;
+  text-align: center;
+  margin-top: 50px;
+}
+/* line 138, ../../../../../../home/akashmanohar/.rvm/gems/ruby-1.9.2-p136/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .wrapper .footer {
+  overflow-x: hidden;
+}
+/* line 19, ../../app/stylesheets/application.scss */
+.wrapper .footer a {
+  color: #06C;
+}
+/* line 22, ../../app/stylesheets/application.scss */
+.wrapper .footer img {
+  vertical-align: middle;
+}
+/* line 27, ../../app/stylesheets/application.scss */
 .wrapper .notice {
   display: inline;
   float: left;
@@ -1098,7 +1119,7 @@ a img {
 * html .wrapper .notice {
   overflow-x: hidden;
 }
-/* line 21, ../../app/stylesheets/application.scss */
+/* line 33, ../../app/stylesheets/application.scss */
 .wrapper .content {
   display: inline;
   float: left;
@@ -1109,12 +1130,12 @@ a img {
 * html .wrapper .content {
   overflow-x: hidden;
 }
-/* line 23, ../../app/stylesheets/application.scss */
+/* line 35, ../../app/stylesheets/application.scss */
 .wrapper .content .actions {
   text-align: center;
   margin-top: 3em;
 }
-/* line 26, ../../app/stylesheets/application.scss */
+/* line 38, ../../app/stylesheets/application.scss */
 .wrapper .content .actions .create_todo {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -1177,7 +1198,7 @@ a img {
 .wrapper .content .actions .create_todo:active, .wrapper .content .actions .create_todo:active:visited {
   color: white;
 }
-/* line 32, ../../app/stylesheets/application.scss */
+/* line 44, ../../app/stylesheets/application.scss */
 .wrapper .content .new_todo {
   display: inline;
   float: left;
@@ -1189,48 +1210,48 @@ a img {
 * html .wrapper .content .new_todo {
   overflow-x: hidden;
 }
-/* line 35, ../../app/stylesheets/application.scss */
+/* line 47, ../../app/stylesheets/application.scss */
 .wrapper .content .new_todo .todo_label {
   font-size: 160%;
   font-family: serif;
 }
-/* line 40, ../../app/stylesheets/application.scss */
+/* line 52, ../../app/stylesheets/application.scss */
 .wrapper .content .new_todo .todo_name {
   width: 478.958px !important;
 }
-/* line 42, ../../app/stylesheets/application.scss */
+/* line 54, ../../app/stylesheets/application.scss */
 .wrapper .content .new_todo .todo_name input[type=text] {
   width: 100%;
 }
-/* line 46, ../../app/stylesheets/application.scss */
+/* line 58, ../../app/stylesheets/application.scss */
 .wrapper .content .new_todo .tasks {
   margin-top: 3em;
   width: 500px !important;
 }
-/* line 48, ../../app/stylesheets/application.scss */
+/* line 60, ../../app/stylesheets/application.scss */
 .wrapper .content .new_todo .tasks .tasks_title {
   font-size: 160%;
   font-family: serif;
 }
-/* line 53, ../../app/stylesheets/application.scss */
+/* line 65, ../../app/stylesheets/application.scss */
 .wrapper .content .new_todo .tasks .task {
   width: 500px !important;
   vertical-align: middle;
 }
-/* line 56, ../../app/stylesheets/application.scss */
+/* line 68, ../../app/stylesheets/application.scss */
 .wrapper .content .new_todo .tasks .task input[type=text] {
   width: 90%;
 }
-/* line 60, ../../app/stylesheets/application.scss */
+/* line 72, ../../app/stylesheets/application.scss */
 .wrapper .content .new_todo .tasks .task a img {
   vertical-align: middle;
 }
-/* line 67, ../../app/stylesheets/application.scss */
+/* line 79, ../../app/stylesheets/application.scss */
 .wrapper .content .new_todo .add_task a {
   color: #06C;
   font-size: 120%;
 }
-/* line 75, ../../app/stylesheets/application.scss */
+/* line 87, ../../app/stylesheets/application.scss */
 .wrapper .show_todo {
   display: inline;
   float: left;
@@ -1242,13 +1263,13 @@ a img {
 * html .wrapper .show_todo {
   overflow-x: hidden;
 }
-/* line 78, ../../app/stylesheets/application.scss */
+/* line 90, ../../app/stylesheets/application.scss */
 .wrapper .show_todo .todo_name {
   font-size: 160%;
   font-weight: bold;
   margin-bottom: 10px;
 }
-/* line 84, ../../app/stylesheets/application.scss */
+/* line 96, ../../app/stylesheets/application.scss */
 .wrapper .show_todo .task {
   display: inline;
   float: left;
@@ -1261,7 +1282,7 @@ a img {
 * html .wrapper .show_todo .task {
   overflow-x: hidden;
 }
-/* line 88, ../../app/stylesheets/application.scss */
+/* line 100, ../../app/stylesheets/application.scss */
 .wrapper .show_todo .task .task_arrow {
   display: inline;
   float: left;
@@ -1272,7 +1293,7 @@ a img {
 * html .wrapper .show_todo .task .task_arrow {
   overflow-x: hidden;
 }
-/* line 91, ../../app/stylesheets/application.scss */
+/* line 103, ../../app/stylesheets/application.scss */
 .wrapper .show_todo .task .task_name {
   display: inline;
   float: left;
@@ -1285,7 +1306,7 @@ a img {
   overflow-x: hidden;
 }
 
-/* line 99, ../../app/stylesheets/application.scss */
+/* line 111, ../../app/stylesheets/application.scss */
 .striken {
   color: #888;
   text-decoration: line-through;

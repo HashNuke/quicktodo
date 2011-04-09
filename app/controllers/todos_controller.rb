@@ -15,7 +15,7 @@ class TodosController < ApplicationController
     @todo = Todo.new(params[:todo])
 
     if @todo.save
-      redirect_to "/" << @todo.url_hash, :notice => "Here's you todo list..."
+      redirect_to "/" << (@todo.url_hash).downcase, :notice => "Here's you todo list..."
     else
       render :action => "new"
     end

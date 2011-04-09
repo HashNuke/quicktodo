@@ -6,7 +6,7 @@
   .tasks
     - @todo.tasks.each do |task|
       .task
-        = form_for task do |f|
+        = form_for task, :remote => true do |f|
           = f.hidden_field :completed, :class=>"task_completion"
           .task_arrow
             = image_tag "arrow.png"

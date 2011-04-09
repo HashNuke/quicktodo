@@ -19,7 +19,7 @@
       .tasks_title Tasks
       = f.fields_for :tasks do |task_f|
         .task
-          = task_f.text_field :name
+          = task_f.text_field :name, :class=>"task_name_input"
           = task_f.link_to_remove image_tag("delete.gif")
     .add_task
       = f.link_to_add "Add another task", :tasks

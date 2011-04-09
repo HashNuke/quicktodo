@@ -11,7 +11,19 @@
         .name_quick {color: #777;} 
         .name_todo {color: #990080;} 
     }
-
+    
+    .footer {
+        @include column(24, true);
+        text-align: center;
+        margin-top: 50px;
+        a {
+          color: #06C;
+        }
+        img {
+          vertical-align: middle;
+        }
+    }
+    
     .notice {
       @include column(23, true); 
       text-align: center;
