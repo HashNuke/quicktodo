@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    %title QuickTodo
+    = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'print.css', :media => 'print'
+    
+    /[if lt IE 8]
+      = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
+
+    = javascript_include_tag "jquery", "rails"
+    /[if lt IE 7]
+      = stylesheet_link_tag 'ie6.css', :media => 'screen, projection'  
+
+    = yield :header
+    = csrf_meta_tag
+  %body
+    .wrapper
+      .user_info
+
+      .header
+
+      -if notice
+        .notice
+          =notice
+
+      .content
+        = yield
+
+      .footer
+        

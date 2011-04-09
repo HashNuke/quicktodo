@@ -1,0 +1,12 @@
+@import "partials/base";
+
+.wrapper {
+    @include blueprint(true);    
+    @include container;
+   
+    .notice {
+      @include column(24, true); 
+      text-align: center;
+      font-weight: bold;
+    }
+}
