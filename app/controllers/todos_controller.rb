@@ -1,17 +1,5 @@
 class TodosController < ApplicationController
-  # GET /todos
-  # GET /todos.xml
-  def index
-    @todos = Todo.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @todos }
-    end
-  end
-
-  # GET /todos/1
-  # GET /todos/1.xml
   def show
     @todo = Todo.find_by_url_hash(params[:url_hash])
 
@@ -32,13 +20,7 @@ class TodosController < ApplicationController
     end
   end
 
-  # GET /todos/1/edit
-  def edit
-    @todo = Todo.find(params[:id])
-  end
 
-  # POST /todos
-  # POST /todos.xml
   def create
     @todo = Todo.new(params[:todo])
 
@@ -53,8 +35,6 @@ class TodosController < ApplicationController
     end
   end
 
-  # PUT /todos/1
-  # PUT /todos/1.xml
   def update
     @todo = Todo.find(params[:id])
 
@@ -69,15 +49,4 @@ class TodosController < ApplicationController
     end
   end
 
-  # DELETE /todos/1
-  # DELETE /todos/1.xml
-  def destroy
-    @todo = Todo.find(params[:id])
-    @todo.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(todos_url) }
-      format.xml  { head :ok }
-    end
-  end
 end
