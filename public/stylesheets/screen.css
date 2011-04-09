@@ -481,14 +481,14 @@ body.bp .box {
 }
 /* line 44, ../../../../../../home/akashmanohar/.rvm/gems/ruby-1.9.2-p136/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
 body.bp div.border {
-  padding-right: 4px;
-  margin-right: 5px;
+  padding-right: 1.5px;
+  margin-right: 2.5px;
   border-right: 1px solid #eeeeee;
 }
 /* line 47, ../../../../../../home/akashmanohar/.rvm/gems/ruby-1.9.2-p136/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
 body.bp div.colborder {
-  padding-right: 24px;
-  margin-right: 25px;
+  padding-right: 12px;
+  margin-right: 13px;
   border-right: 1px solid #eeeeee;
 }
 /* line 49, ../../../../../../home/akashmanohar/.rvm/gems/ruby-1.9.2-p136/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
@@ -589,7 +589,7 @@ form.bp textarea {
 
 /* line 25, ../../app/stylesheets/partials/_two_col.scss */
 body.two-col #container {
-  width: 950px;
+  width: 500px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
@@ -598,8 +598,8 @@ body.two-col #container {
 body.two-col #header, body.two-col #footer {
   display: inline;
   float: left;
-  margin-right: 10px;
-  width: 950px;
+  margin-right: 5px;
+  width: 500px;
 }
 /* line 138, ../../../../../../home/akashmanohar/.rvm/gems/ruby-1.9.2-p136/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html body.two-col #header, * html body.two-col #footer {
@@ -609,8 +609,8 @@ body.two-col #header, body.two-col #footer {
 body.two-col #sidebar {
   display: inline;
   float: left;
-  margin-right: 10px;
-  width: 310px;
+  margin-right: 5px;
+  width: 163.333px;
 }
 /* line 138, ../../../../../../home/akashmanohar/.rvm/gems/ruby-1.9.2-p136/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html body.two-col #sidebar {
@@ -621,7 +621,7 @@ body.two-col #content {
   display: inline;
   float: left;
   margin-right: 0;
-  width: 630px;
+  width: 331.667px;
 }
 /* line 138, ../../../../../../home/akashmanohar/.rvm/gems/ruby-1.9.2-p136/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html body.two-col #content {

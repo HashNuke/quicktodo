@@ -14,8 +14,10 @@
     = f.text_field :name
     
   .tasks
+    .tasks_title Tasks
     = f.fields_for :tasks do |task_f|
-      = task_f.text_field :name
+      .task
+        = task_f.text_field :name
 
   .actions
-    = f.submit :class=>"create_todo"
+    = f.submit "Create todo list", :class=>"create_todo"

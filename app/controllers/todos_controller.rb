@@ -1,12 +1,12 @@
 class TodosController < ApplicationController
 
   def show
-    @todo = Todo.find_by_url_hash params[:url_hash].upcase
+    @todo = Todo.includes(:tasks).find_by_url_hash params[:url_hash].upcase
   end
 
   def new
     @todo = Todo.new
-    3.times do
+    4.times do
       @todo.tasks.build
     end
   end

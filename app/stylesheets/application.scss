@@ -3,10 +3,46 @@
 .wrapper {
     @include blueprint(true);    
     @include container;
-   
-    .notice {
-      @include column(24, true); 
-      text-align: center;
-      font-weight: bold;
+
+    .content {
+        @include column(24, true);
+        .actions {
+            text-align: center;
+            margin-top: 3em;
+            .create_todo {
+                @include fancy-button(#329E00, 18px, 3px);
+            }
+        }
+       
+        .notice {
+          @include column(24, true); 
+          text-align: center;
+          font-weight: bold;
+        }
+
+        form {
+            @include column(24,true);
+            .todo_name {
+                @include span(23,true);
+                input[type=text] {
+                    width: 100%;
+                }
+            }
+            .tasks {
+                .tasks_title {
+                    color: #060;
+                }
+                @include span(24,true);
+                .task {
+                    @include span(23,true);
+                    input[type=text] {
+                        width: 100%;
+                    }
+                }
+            }
+        }    
     }
+
+    
+
 }
