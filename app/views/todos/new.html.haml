@@ -10,10 +10,13 @@
           %li
             = msg
 
-  
-
-  .field
+  .todo_name
     = f.text_field :name
+    
+  .tasks
+    = f.fields_for :tasks do |task_f|
+      = task_f.text_field :name
+
   .actions
     = f.submit :class=>"create_todo"
 

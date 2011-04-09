@@ -1,13 +1,15 @@
 class TodosController < ApplicationController
 
   def show
-    @todo = Todo.find_by_url_hash(params[:url_hash])
+    @todo = Todo.find_by_url_hash params[:url_hash].upcase
   end
 
   def new
     @todo = Todo.new
+    3.times do
+      @todo.tasks.build
+    end
   end
-
 
   def create
     @todo = Todo.new(params[:todo])
