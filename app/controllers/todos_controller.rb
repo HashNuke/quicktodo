@@ -13,7 +13,7 @@ class TodosController < ApplicationController
   # GET /todos/1
   # GET /todos/1.xml
   def show
-    @todo = Todo.find(params[:id])
+    @todo = Todo.find_by_url_hash(params[:url_hash])
 
     respond_to do |format|
       format.html # show.html.erb

@@ -11,6 +11,7 @@ gem 'haml'
 gem 'compass'
 gem 'fancy-buttons'
 gem 'base32'
+gem 'nested_form'
 
 # Use unicorn as the web server
 # gem 'unicorn'

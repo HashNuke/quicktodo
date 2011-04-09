@@ -1,6 +1,9 @@
 Quicktodo::Application.routes.draw do
-  resources :todos
 
+  match "/:url_hash" => "todos#show", :as=>:hashed
+
+  resources :todos
+  
   root :to => "todos#new"
 
   # The priority is based upon order of creation:
