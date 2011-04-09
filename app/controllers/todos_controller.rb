@@ -15,7 +15,7 @@ class TodosController < ApplicationController
     @todo = Todo.new(params[:todo])
 
     if @todo.save
-      redirect_to(@todo, :notice => 'Todo was successfully created.')
+      redirect_to "/" << @todo.url_hash, :notice => "Here's you todo list..."
     else
       render :action => "new"
     end
@@ -23,11 +23,11 @@ class TodosController < ApplicationController
 
   def update
     @todo = Todo.find(params[:id])
-
-    if @todo.update_attributes(params[:todo])
-      redirect_to(@todo, :notice => 'Todo was successfully updated.')
+    
+    if request.xhr? and @todo.update_attributes(params[:todo])
+      render :head=>:ok
     else
-      render :action => "edit"
+      render :action => "new"
     end
   end
 
